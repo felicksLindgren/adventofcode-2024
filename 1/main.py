@@ -1,6 +1,5 @@
 input = open("input.txt", "r").read()
-lines = input.split("\n")
-lines = [line.split("   ") for line in lines]
+lines = [line.split("   ") for line in input.split("\n")]
 
 def calculate_distance():
     col0 = [line[0] for line in lines]
