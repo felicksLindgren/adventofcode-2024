@@ -7,4 +7,4 @@ All solutions are written in Python. The goal is to solve each day's puzzle.s
 
 ## Solutions
 
-- [Day 1](./day1)
+- [Day 1](./1)
