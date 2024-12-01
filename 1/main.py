@@ -30,9 +30,7 @@ def calculate_similarity_score():
 
         sum += sum_of_key_in_col1
 
-    # print(product)
     return sum
-
 
 if __name__ == "__main__":
     print(calculate_distance())
