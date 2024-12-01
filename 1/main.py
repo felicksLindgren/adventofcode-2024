@@ -1,5 +1,3 @@
-# Read the input file and calculate the sum of the distances between the two points
-
 input = open("input.txt", "r").read()
 lines = input.split("\n")
 lines = [line.split("   ") for line in lines]
@@ -25,7 +23,7 @@ def calculate_similarity_score():
     for i in range(len(col0)):
         key = col0[i]
         sum_of_key_in_col1 = 0
-        
+
         for j in range(len(col1)):
             if col1[j] == key:
                 sum_of_key_in_col1 += int(col1[j])
