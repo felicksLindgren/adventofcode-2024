@@ -7,4 +7,6 @@ All solutions are written in Python. The goal is to solve each day's puzzle.s
 
 ## Solutions
 
-- [Day 1](./1): [Solution](./1/main.py)
+- [Day 1](./1):
+  - [main.py](./1/main.py)
+  - [input.txt](./1/input.txt)
