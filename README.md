@@ -10,3 +10,6 @@ All solutions are written in Python. The goal is to solve each day's puzzle.s
 - [Day 1](./1):
   - [main.py](./1/main.py)
   - [input.txt](./1/input.txt)
+- [Day 2](./2):
+  - [main.py](./2/main.py)
+  - [input.txt](./2/input.txt)
