@@ -1,16 +1,3 @@
-""" 
-MMMSXXMASM
-MSAMXMSMSA
-AMXSXMAAMM
-MSAMASMSMX
-XMASAMXAMM
-XXAMMXXAMA
-SMSMSASXSS
-SAXAMASAAA
-MAMMMXMMMM
-MXMXAXMASX
-"""
-
 input = open("input.txt", "r").read()
 lines = input.split("\n")
 
