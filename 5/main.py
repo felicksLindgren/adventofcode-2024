@@ -17,24 +17,18 @@ def part_1():
 
     for update in pages_to_be_produced:
         pages = update.split(",")
-        valid = True
 
         for i in range(len(pages)):
             page = pages[i]
-            rules_for_page = [rule for rule in rules.get(page, []) if rule in pages]
-            preceding_pages = pages[:i]
+            sorted_pages = sorted(pages, key=lambda page: len([rule for rule in rules.get(page, []) if rule in pages]))
 
-            if len(rules_for_page) == 0:
-                continue
-
-            for rule in rules_for_page:
-                if rule not in preceding_pages:
-                    valid = False
-                    break
-
-        if valid:
+            if pages != sorted_pages:
+                break
+            
             middle_page = pages[len(pages) // 2]
-            sum += int(middle_page)
+            if page == middle_page:
+                sum += int(page)
+                break
 
     return sum
 
@@ -51,37 +45,23 @@ def part_2():
 
     for update in pages_to_be_produced:
         pages = update.split(",")
-        valid = True
 
-        for i in range(len(pages)):
-            page = pages[i]
-            rules_for_page = [rule for rule in rules.get(page, []) if rule in pages]
-            preceding_pages = pages[:i]
+        for _ in range(len(pages)):
+            sorted_pages = sorted(pages, key=lambda page: len([rule for rule in rules.get(page, []) if rule in pages]))
 
-            if len(rules_for_page) == 0:
-                continue
-
-            for rule in rules_for_page:
-                if rule not in preceding_pages:
-                    valid = False
-                    break
-            
-            if not valid:
+            if pages != sorted_pages:
                 incorrectly_ordered_updates.append(update)
                 break
 
     sum = 0
     for update in incorrectly_ordered_updates:
         pages = update.split(",")
-        # Sort the pages by the length of rules
         sorted_pages = sorted(pages, key=lambda page: len([rule for rule in rules.get(page, []) if rule in pages]))
 
         middle_page = sorted_pages[len(sorted_pages) // 2]
         sum += int(middle_page)
         
-
     return sum
-
 
 if __name__ == "__main__":
     print(part_1())
