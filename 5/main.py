@@ -17,24 +17,18 @@ def part_1():
 
     for update in pages_to_be_produced:
         pages = update.split(",")
+        sorted_pages = sorted(pages, key=lambda page: len([rule for rule in rules.get(page, []) if rule in pages]))
 
-        for i in range(len(pages)):
-            page = pages[i]
-            sorted_pages = sorted(pages, key=lambda page: len([rule for rule in rules.get(page, []) if rule in pages]))
+        if pages != sorted_pages:
+            continue
 
-            if pages != sorted_pages:
-                break
-            
-            middle_page = pages[len(pages) // 2]
-            if page == middle_page:
-                sum += int(page)
-                break
+        sum += int(pages[len(pages) // 2])
 
     return sum
 
 def part_2():
+    sum = 0
     rules = {}
-    incorrectly_ordered_updates = []
 
     for rule in page_ordering_rules:
         pages = rule.split("|")
@@ -45,18 +39,10 @@ def part_2():
 
     for update in pages_to_be_produced:
         pages = update.split(",")
-
-        for _ in range(len(pages)):
-            sorted_pages = sorted(pages, key=lambda page: len([rule for rule in rules.get(page, []) if rule in pages]))
-
-            if pages != sorted_pages:
-                incorrectly_ordered_updates.append(update)
-                break
-
-    sum = 0
-    for update in incorrectly_ordered_updates:
-        pages = update.split(",")
         sorted_pages = sorted(pages, key=lambda page: len([rule for rule in rules.get(page, []) if rule in pages]))
+
+        if pages == sorted_pages:
+            continue
 
         middle_page = sorted_pages[len(sorted_pages) // 2]
         sum += int(middle_page)
