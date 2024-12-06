@@ -22,3 +22,6 @@ All solutions are written in Python. The goal is to solve each day's puzzle.s
 - [Day 5](./5):
   - [main.py](./5/main.py)
   - [input.txt](./5/input.txt)
+- [Day 6](./6):
+  - [main.py](./6/main.py)
+  - [input.txt](./6/input.txt)
