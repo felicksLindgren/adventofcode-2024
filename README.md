@@ -28,3 +28,6 @@ All solutions are written in Python. The goal is to solve each day's puzzle.s
 - [Day 7](./7):
   - [main.py](./7/main.py)
   - [input.txt](./7/input.txt)
+- [Day 8](./8):
+  - [main.py](./8/main.py)
+  - [input.txt](./8/input.txt)
