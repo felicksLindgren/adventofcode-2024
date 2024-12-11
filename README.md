@@ -37,3 +37,6 @@ All solutions are written in Python. The goal is to solve each day's puzzle.s
 - [Day 10](./10):
   - [main.py](./10/main.py)
   - [input.txt](./10/input.txt)
+- [Day 11](./11):
+  - [main.py](./11/main.py)
+  - [input.txt](./11/input.txt)
