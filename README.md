@@ -40,3 +40,6 @@ All solutions are written in Python. The goal is to solve each day's puzzle.s
 - [Day 11](./11):
   - [main.py](./11/main.py)
   - [input.txt](./11/input.txt)
+- [Day 12](./12):
+  - [main.py](./12/main.py)
+  - [input.txt](./12/input.txt)
